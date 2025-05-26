@@ -3,28 +3,37 @@
   <head>
     <style>
       #container {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 10px;
+      }
+      .Item1 {
+        grid-column: span 1;
+        grid-row: span 2;
+        background-color: #eee;
+        padding: 20px;
       }
 
-      #block{
-        /* flex: flex-row, flex-shrink, flex-basis */
-        flex: 1 1 600px;
-        margin: 2px;
-        height: 100px;
-        width: 100px;
-        background: black;
+      .Item2 {
+        grid-column: 2;
+        grid-row: span 2;
+        background-color: #eee;
+        padding: 20px;
+      }
+      .Item3 {
+        grid-column: span 2;
+        grid-row: 3;
+        background-color: #eee;
+        padding: 20px;
       }
     </style>
   </head>
   <body>
     <div id="container">
-      <div id="block" style="flex-shrink: 1">This is a sentence.</div>
-      <div id="block" style="flex-grow: 2">This is a sentence.</div>
-      <div id="block" style="flex-grow: 1.5">This is a sentence.</div>
+      <div class="Item1">Item 1</div>
+      <div class="Item2">Item 2</div>
+      <div class="Item3">Item 3</div>
     </div>
   </body>
 </html>
