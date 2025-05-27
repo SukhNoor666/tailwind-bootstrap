@@ -9,9 +9,25 @@
       integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
       crossorigin="anonymous"
     />
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>  </head>
-      <!--First line of Tailwind CSS using utility classes-->
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>  
+<style>
+  #hero {
+    background-image: url('https://img.freepik.com/premium-vector/vector-jet-fighter-jet-aircraft-military-aerobatic-sky-with-smoke-indian-flag_600323-2956.jpg?semt=ais_items_boosted&w=740');
+    background-repeat: no-repeat ;
+    background-size: cover;
+    background-position: 0 -250px;
+  }
 
+  #backplate {
+    background: lightcyan;
+    padding: 10px;
+    opacity: 0.8;
+  }
+</style>
+
+</head>
+      <!--First line of Tailwind CSS using utility classes-->
+  
   <body class="bg-gray-100 text-gray-100">
     <!--Navigate bar-->
     <nav class="container mx-auto flex justify-between items-center">
@@ -24,11 +40,13 @@
       </ul>
     </nav>
     <!--Hero Section-->
-      <section class="text-center py-60 bg-gray-200">
-        <h1 class="text-4xl font-bold text-gray-800">Welcome to my Website</h1>
+      <section id="hero" class="text-center py-60 bg-gray-200">
+        <div id="backplate">
+        <h1 class="text-4xl font-bold text-gray-800">Welcome to my Website</h1> 
         <p class="mt-4 text-lg text-gray-600">This was built using TailwindCSS</p>
         <button class="mt-6 bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">Get Started</button>
       </section>
+      </div>
 
     <!--Footer section made with Bootstrap-->
     <footer class="bg-dark text-white text-center pt-4 pb-1">
